@@ -3,34 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>saylani test</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Login</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="images/logo.gif" type="image/png">
+
+    <!-- pwa -->
+    <link rel="manifest" href="/manifest.json">
+
+    <!-- SweetAlert2 CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+
+<!-- SweetAlert2 JS -->
+ <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> 
+
 </head>
-<body>
-    <div style="display: flex;flex-direction: row;height: 100vh;width: 100%;">
-        <div style="display: flex;flex-direction: column;height: 100%;width: 30%;background-color:black;color: white;align-items: center;">
-            <div style="display: flex;flex-direction: column;height: 30%;width: 100%;align-items: center;">
-                <img src="profileimg.png" style="height: 50%;padding-top: 10px;"/>
-            </div> 
-            <div style="display: flex;flex-direction: column;gap: 20px;height: 70%;">
-                <h1>name:</h1>
-                <h1>age:</h1>
-                <h1>email:</h1>
-                <h1></h1>
-            </div>
+<body style="height: 100vh;">
+    <div class="container">
+        <div class="form-container">
+            <!-- <img src="images/staranimated.gif" width="50px" style="object-fit:contain;" alt="Logo"> -->
+            <h2>Log in to your account</h2>
+            <p>Welcome back! Please enter your details.</p>
+            
+            <form id="loginForm">
+                <div class="input-group">
+                    <label for="loginEmail">Email</label>
+                    <input type="email" id="loginEmail" placeholder="Enter your email" required>
+                </div>
+                
+                <div class="input-group">
+                    <label for="loginPassword">Password</label>
+                    <input type="password" id="loginPassword" minlength="6" placeholder="Enter your password" required>
+                </div>
+                
+                <div id="error-message" style="color: red;"></div>
+                
+                <button type="button" id="loginBtn">Log In</button>
+                </form>
+                <!-- <div class="social-login">
+                    <button type="button" class="google" id="googleBtn">
+                        <img class="logo" src="images/google-logo-png.png" alt="Google Logo"> Log in with Google
+                    </button><br>
+                    
+                    <button type="button" class="facebook" id="fbBtn">
+                        <img class="logo" src="images/facebook-icon-png.webp" alt="Facebook Logo"> Log in with Facebook
+                    </button>
+                    <br>
+                    <button type="button" class="phone facebook" id="phoneLoginButton">
+                        <img class="logo" src="images/phone.logomsg.png" alt=""> <a href="phone_signup.html" id="must">Log in with Phone</a> 
+                    </button>
+                </div> -->
+                
+                <p>Don't have an account? <a href="singup.html" id="must">Sign up</a></p>
+            
         </div>
-        <div style="display: flex;flex-direction: column;align-items: center;width: 100%;">
-            <div style="display: flex;flex-direction: row;height: 20vh;width: 100%;align-items: center;padding-top: 10px;background-color: black;justify-content: space-around;">
-              <input type="text" placeholder="enter your heading" style="height: 5vh;width: 20vw;color: white;">
-                <input type="text" placeholder=" enter your blog" style="height: 5vh;width: 20vw;" > 
-                <button style="height: 5vh;width: 20vw;background-color: transparent;">post blog</button>
-            </div>
     </div>
-    </div>
-
-
     
-    
-    <script src="index.js"></script>
+    <script src="firebase.js" type="module"></script> 
+    <script src="app.js" type="module"></script> 
+    <script src="pwa.js"></script>
+    <script src="sw.js"></script>
 </body>
 </html>

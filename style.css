@@ -2,3 +2,25 @@ body{
     margin: 0;
     padding: 0;
 }
+.main-div{
+    display: flex;flex-direction: row;background-color: black;height: 100%;width: 100%;align-items: center;justify-content: center;gap: 20px;
+}
+.main-div a{
+color: white;
+}
+.blog-main-div{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 50%;
+    align-items: center;
+}
+.blogs-main-row-div{
+    display: flex;
+    padding-top: 10px;
+    background-color: pink;
+    flex-direction: row !important;
+    justify-content: space-around;
+    height: 100%;
+    width: 100%;
+}

@@ -1,5 +1,6 @@
 
 
+
 import {
   auth,
   GoogleAuthProvider,
@@ -52,12 +53,12 @@ onAuthStateChanged(auth, (user) => {
     let displayNameOrEmail = user.displayName || user.phoneNumber || user.email.split('@')[0];
     abc.innerHTML = `
         <span> Welcome <i><b>${displayNameOrEmail}</b></i> </span><br>
-       
+        <div class="userName">
+            <img class="userImg" src="${user.photoURL || 'images/userfb.png'}" alt="User Photo" />
+        </div>
     `;
     
-   <div class="userName">
-              <img class="userImg" src="${user.photoURL || 'images/userfb.png'}" alt="User Photo" />
-          </div>
+
     
 
    
@@ -231,4 +232,3 @@ const handleEmailPasswordSignup = async (event) => {
 
 const signupBtn = document.getElementById("signupBtn");
 signupBtn && signupBtn.addEventListener("click", handleEmailPasswordSignup);
-

@@ -1,3 +1,5 @@
+
+
 import {
   auth,
   GoogleAuthProvider,
@@ -53,9 +55,9 @@ onAuthStateChanged(auth, (user) => {
        
     `;
     
-//    <div class="userName">
-//               <img class="userImg" src="${user.photoURL || 'images/userfb.png'}" alt="User Photo" />
-//           </div>
+   <div class="userName">
+              <img class="userImg" src="${user.photoURL || 'images/userfb.png'}" alt="User Photo" />
+          </div>
     
 
    
